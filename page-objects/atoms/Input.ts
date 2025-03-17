@@ -21,9 +21,8 @@ export class Input {
         return await this.input.inputValue();
     }
 
-    //async checkInView(): Promise<string> {
-    //return await
-    // expect(this.input).toBeInViewport()
-    //}
+    async checkInViewPort(): Promise<void> {
+        await expect(this.input).toBeInViewport();
+    }
 
 }
