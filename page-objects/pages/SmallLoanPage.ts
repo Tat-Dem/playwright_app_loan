@@ -67,10 +67,6 @@ export class SmallLoanPage {
         return await this.periodSlider.inputValue();
     }
 
-    async checkErrorMessageOops(): Promise<void> {
-        await expect(this.errorMessage).toContainText("Oops, something went wrong");
-    }
-
     async checkPaymentUndefined(): Promise<void> {
         const paymentErrorText = await this.monthlyAmountSpan.innerText();
         expect(paymentErrorText).toContain("undefined");
