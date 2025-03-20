@@ -63,3 +63,4 @@ test.describe("Loan app mock tests",async () => {
         await smallLoanPage.checkPaymentUndefined();
     });
 })
+
