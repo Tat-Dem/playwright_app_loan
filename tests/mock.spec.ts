@@ -15,7 +15,7 @@ test.describe("Loan app mock tests",async () => {
             });
         });
         const loanCalcResponse = page.waitForResponse("**/api/loan-calc*");
-        await page.goto("http://localhost:3000");
+        await smallLoanPage.open();
         await loanCalcResponse;
         await smallLoanPage.checkMonthlyAmount(expectedMonthlyAmount);
     });
@@ -47,8 +47,8 @@ test.describe("Loan app mock tests",async () => {
 
     test('TL-21-4 negative test: 200 with incorrect key', async ({ page }) => {
         const smallLoanPage = new SmallLoanPage(page);
-
         await page.route("**/api/loan-calc*", async (request ) => {
+
             const responseBody = {incorrectkey: 1347};
             await request.fulfill({
                 status: 200,
