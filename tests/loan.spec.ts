@@ -63,8 +63,3 @@ test.describe("Loan app tests",async () => {
     expect(newPeriodValue).toEqual(newFinalPeriod);
   });
 })
-
-
-
-
-

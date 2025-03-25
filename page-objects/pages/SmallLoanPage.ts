@@ -71,5 +71,4 @@ export class SmallLoanPage {
         const paymentErrorText = await this.monthlyAmountSpan.innerText();
         expect(paymentErrorText).toContain("undefined");
     }
-
 }
