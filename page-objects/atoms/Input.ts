@@ -24,5 +24,4 @@ export class Input {
     async checkInViewPort(): Promise<void> {
         await expect(this.input).toBeInViewport();
     }
-
 }
